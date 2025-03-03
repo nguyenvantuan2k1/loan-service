@@ -5,7 +5,7 @@ import { formatCurrency } from './utils/NumberUtil';
 import { validateNullOrEmpty, validatePhoneNumber } from './utils/Validate';
 import { validateRecaptcha } from './utils/api';
 function App() {
-  const SITE_KEY_V2 = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY_V2 || '';
+  const SITE_KEY_V2 = process.env.REACT_APP_PUBLIC_RECAPTCHA_SITE_KEY_V2 || '';
   // form states
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
