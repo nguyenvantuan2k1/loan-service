@@ -78,16 +78,16 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitted(true);
-    if (!validateForm()) {
-      return;
-    }
+    // if (!validateForm()) {
+    //   return;
+    // }
     try {
-      const token = await recaptchaRef.current.getValue();;
-      const tokenV3IsValid = await validateRecaptcha({ token });
+      // const token = await recaptchaRef.current.getValue();;
+      // const tokenV3IsValid = await validateRecaptcha({ token });
 
-      if (!tokenV3IsValid) {
-        setShowRecaptchaV2(true);
-      } else {
+      // if (!tokenV3IsValid) {
+      //   setShowRecaptchaV2(true);
+      // } else {
         const data = {
           ...formData,
           loan: formatCurrency(formData.loan)
@@ -99,11 +99,11 @@ function App() {
           // setLoan('');
           // setSalary('');
         })
-      }
+      // }
     } catch (error) {
       console.error("Error during form submission:", error);
     } finally {
-      recaptchaRef.current?.reset();
+      // recaptchaRef.current?.reset();
     }
 
   }
