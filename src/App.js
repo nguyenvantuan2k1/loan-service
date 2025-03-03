@@ -171,7 +171,7 @@ function App() {
         <br />
         {showRecaptchaV2 && (
           <ReCAPTCHA
-            sitekey={'6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'}
+            sitekey={SITE_KEY_V2}
             onChange={handleRecaptchaV2Change}
             ref={recaptchaRef}
           />
